@@ -1,112 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HomeVolt.ev | EV Charging Infrastructure for Apartments</title>
-
-  <!-- SEO -->
-  <meta name="description" content="HomeVolt.ev designs and manages scalable EV charging infrastructure for apartment communities. Safe, fair, and future-ready solutions." />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeVolt.ev | Premium Residential Charging Infrastructure</title>
+    <meta name="description" content="End-to-End EV Charging Infrastructure & Solutions for Apartments and Residential Communities. Safe, Scalable, and Managed.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="dark-theme">
 
-<body>
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo-wrapper">
+                <img src="assets/logo.jpeg" alt="HomeVolt.ev Logo" class="nav-logo">
+            </a>
+            
+            <div class="nav-links">
+                <a href="#problem" class="nav-item">The Problem</a>
+                <a href="#solution" class="nav-item">Our Solution</a>
+                <a href="#contact" class="nav-cta">Plan Infrastructure</a>
+            </div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="logo">HomeVolt<span>.ev</span></div>
-      <nav class="nav">
-        <a href="#solution">Solution</a>
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact" class="nav-cta">Talk to Us</a>
-      </nav>
+            <button class="mobile-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="#problem" class="mobile-link">The Problem</a>
+        <a href="#solution" class="mobile-link">Our Solution</a>
+        <a href="#contact" class="mobile-link highlight">Plan Infrastructure</a>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>EV Charging Infrastructure for Apartments — Done Right</h1>
-      <p>
-        Individual chargers don’t scale. HomeVolt.ev builds centralized,
-        safe, and future-ready EV charging ecosystems for apartment communities.
-      </p>
-      <a href="#contact" class="primary-btn">Plan EV Infrastructure</a>
-    </div>
-  </section>
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+        
+        <div class="container hero-content">
+            <span class="pill-badge fade-in-up">⚡ Future-Ready Communities</span>
+            <h1 class="fade-in-up delay-1">
+                The Future of Apartment Living is <span class="gradient-text">EV-Ready.</span>
+            </h1>
+            <p class="fade-in-up delay-2">
+                Stop managing individual chargers. We design, install, and operate a centralized, scalable EV charging ecosystem for your entire society.
+            </p>
+            <div class="hero-actions fade-in-up delay-3">
+                <a href="#contact" class="btn btn-primary">
+                    Get a Consultation <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#solution" class="btn btn-secondary">
+                    How It Works
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+    </section>
 
-  <!-- Problem Section -->
-  <section class="section light">
-    <div class="container">
-      <h2>The Problem with Individual EV Chargers</h2>
-      <ul class="problem-list">
-        <li>Unmanaged electrical load and frequent power trips</li>
-        <li>Safety risks due to unplanned wiring</li>
-        <li>Messy basements with repeated drilling</li>
-        <li>No fair or transparent billing for residents</li>
-      </ul>
-    </div>
-  </section>
+    <section id="problem" class="section-padding bg-darker">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">Why Individual Chargers Fail</h2>
+                <p class="reveal-text">Unplanned installation is a safety hazard and an administrative nightmare.</p>
+            </div>
 
-  <!-- Solution Section -->
-  <section id="solution" class="section">
-    <div class="container">
-      <h2>Our Centralized EV Infrastructure Solution</h2>
-      <p>
-        HomeVolt.ev replaces fragmented charger installations with a
-        professionally designed, centrally managed EV charging system
-        built for apartment communities.
-      </p>
-    </div>
-  </section>
+            <div class="grid-3">
+                <div class="card reveal-card">
+                    <div class="icon-box red">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+                    <h3>Safety Risks</h3>
+                    <p>Random wiring and patchwork drilling in basements create severe fire hazards and overload risks.</p>
+                </div>
 
-  <!-- Services -->
-  <section id="services" class="section light">
-    <div class="container">
-      <h2>Services & Capabilities</h2>
-      <div class="grid">
-        <div class="card">End-to-end infrastructure design & setup</div>
-        <div class="card">Future-ready scalable architecture</div>
-        <div class="card">Smart electrical load management</div>
-        <div class="card">Clean, structured installations</div>
-        <div class="card">Usage-based billing & monitoring</div>
-        <div class="card">Operations, maintenance & support</div>
-      </div>
-    </div>
-  </section>
+                <div class="card reveal-card">
+                    <div class="icon-box orange">
+                        <i data-lucide="zap-off"></i>
+                    </div>
+                    <h3>Grid Instability</h3>
+                    <p>Unmanaged power surges from multiple individual chargers will trip your community breakers.</p>
+                </div>
 
-  <!-- Why HomeVolt -->
-  <section id="why" class="section">
-    <div class="container">
-      <h2>Why HomeVolt.ev</h2>
-      <p>
-        We are not charger vendors. We are infrastructure partners focused
-        on long-term safety, scalability, and community value.
-      </p>
-    </div>
-  </section>
+                <div class="card reveal-card">
+                    <div class="icon-box yellow">
+                        <i data-lucide="file-warning"></i>
+                    </div>
+                    <h3>Billing Chaos</h3>
+                    <p>Manual tracking of electricity usage leads to disputes and administrative overload.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section light">
-    <div class="container">
-      <h2>Talk to Us</h2>
-      <p><strong>Elvis J George</strong> — +91 99450 87700</p>
-      <p><strong>Hemanth Jasti</strong> — +91 73488 92245</p>
-      <p>Email: <a href="mailto:homevolt.ev@gmail.com">homevolt.ev@gmail.com</a></p>
-    </div>
-  </section>
+    <section id="solution" class="section-padding">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-content reveal-side">
+                    <span class="accent-label">The HomeVolt Standard</span>
+                    <h2>End-to-End Infrastructure. <br>Zero Headaches.</h2>
+                    <p>We don't just install plugs. We engineer a smart grid that sits seamlessly within your building's architecture.</p>
+                    
+                    <ul class="feature-list">
+                        <li>
+                            <i data-lucide="check-circle-2"></i>
+                            <div>
+                                <strong>Smart Load Balancing</strong>
+                                <span>Distributes power intelligently to prevent trips.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle-2"></i>
+                            <div>
+                                <strong>Clean Installation</strong>
+                                <span>Centralized cable trays. No clutter, no drilling damage.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle-2"></i>
+                            <div>
+                                <strong>Fair Usage Billing</strong>
+                                <span>App-based tracking. Residents pay only for what they use.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="split-visual reveal-side delay-1">
+                    <div class="visual-card">
+                        <div class="glow-effect"></div>
+                        <div class="conduit-lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="charger-box">
+                            <i data-lucide="battery-charging"></i>
+                            <span>Active Charging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 HomeVolt.ev. All rights reserved.</p>
-    </div>
-  </footer>
+    <section id="contact" class="section-padding bg-darker">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-text">
+                    <h2>Let's Future-Proof Your Community.</h2>
+                    <p>Schedule a site visit with our engineering leads.</p>
+                    <div class="contact-cards">
+                        <div class="info-item">
+                            <i data-lucide="user"></i>
+                            <div>
+                                <strong>Project Leads</strong>
+                                <span> Elvis J George </span>
+                                <span> Hemanth Jasti </span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <strong>Call Us</strong>
+                                <a href="tel:+919945087700">+91 99450 87700</a>
+                                <a href="tel:+917348892245">+91 73488 92245</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:homevolt.ev@gmail.com">homevolt.ev@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <script src="script.js"></script>
+                <script type="text/javascript">var submitted=false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='#'}"></iframe>
+                
+                <form 
+                    class="contact-form reveal-card" 
+                    id="consultationForm" 
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSeDxITvPeszMu56CQjKVMG7u8QB_GTvV9bKZn-eP2l8ne_-PQ/formResponse" 
+                    method="POST" 
+                    target="hidden_iframe"
+                    onsubmit="submitted=true;"
+                >
+                    <h3>Request Consultation</h3>
+                    
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="entry.1534456062" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Society / Apartment Name</label>
+                        <input type="text" name="entry.1889935958" placeholder="e.g. Prestige Lakeside" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="entry.1538660294" placeholder="+91..." required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary full-width">
+                        Submit Request
+                    </button>
+                </form>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 HomeVolt.ev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
