@@ -113,11 +113,10 @@ nav {
 }
 
 .nav-logo {
-    height: 65px;
+    height: 95px;
     width: auto;
     border-radius: 8px;
-    background: white;
-    padding: 2px;
+    
 }
 
 .nav-links {
