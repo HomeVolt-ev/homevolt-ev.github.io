@@ -37,30 +37,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.reveal-text, .reveal-card, .reveal-side');
     animatedElements.forEach(el => observer.observe(el));
 
-    // 3. Google Form Submission UI Handling
+    // 3. Google Form Submission UI Handling (Premium Toast)
     const form = document.getElementById('consultationForm');
+    const successToast = document.getElementById('success-notification');
     
     if (form) {
         form.addEventListener('submit', () => {
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
             
-            // Change button UI to show processing immediately
+            // A. Change button UI to show processing
             btn.innerText = "Sending...";
             btn.style.opacity = "0.7";
-            btn.style.pointerEvents = "none"; // Prevent double clicking
+            btn.style.pointerEvents = "none";
             
-            // Wait 1.5 seconds (to allow form to post to hidden iframe) then show success
+            // B. Wait 1.5 seconds (to simulate network request)
             setTimeout(() => {
+                // Reset Button
                 btn.innerText = "Request Sent!";
                 btn.style.background = "#fff";
                 btn.style.color = "#000";
                 btn.style.opacity = "1";
                 
-                // Reset form fields
+                // C. Show Premium Toast Notification
+                if (successToast) {
+                    successToast.classList.add('active');
+                    
+                    // Hide Toast automatically after 5 seconds
+                    setTimeout(() => {
+                        successToast.classList.remove('active');
+                    }, 5000);
+                }
+
+                // Reset Form
                 form.reset();
                 
-                // Revert button after 3 seconds
+                // Revert button text after 3 seconds
                 setTimeout(() => {
                     btn.innerText = originalText;
                     btn.style.background = "";
@@ -68,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.pointerEvents = "auto";
                 }, 3000);
                 
-                alert("Thanks! Your request has been sent to the HomeVolt team.");
             }, 1500);
         });
     }

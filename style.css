@@ -387,11 +387,10 @@ nav {
     line-height: 1.2;
 }
 
-/* --- FIX: Added extra spacing below the description --- */
 .contact-info p {
     color: var(--text-muted);
     font-size: 1.1rem;
-    margin-bottom: 50px; /* Added 50px gap here */
+    margin-bottom: 50px; /* Large space to fix congestion */
 }
 
 .info-item {
@@ -497,3 +496,71 @@ footer {
 /* Scroll Reveal Classes */
 .reveal-text, .reveal-card, .reveal-side { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .visible { opacity: 1; transform: translateY(0); }
+
+/* --- Premium Success Toast Notification --- */
+.success-toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* Slides in from the bottom right */
+    background: rgba(21, 25, 28, 0.95); /* Deep dark background */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--primary); /* Green accent bar */
+    padding: 20px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* Heavy shadow for depth */
+    z-index: 9999;
+    max-width: 400px;
+    
+    /* Animation: Hidden State */
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); /* Premium "pop" easing */
+}
+
+/* Animation: Active State (Added by JS) */
+.success-toast.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+.toast-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 210, 106, 0.15); /* Glow behind icon */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.toast-content h3 {
+    font-family: var(--font-heading);
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.toast-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .success-toast {
+        right: 20px;
+        left: 20px; /* Center it on mobile */
+        bottom: 20px;
+    }
+}
