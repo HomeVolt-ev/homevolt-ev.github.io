@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://homevolt-ev.github.io/sitemap.xml
