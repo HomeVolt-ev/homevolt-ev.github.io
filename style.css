@@ -25,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height); /* This fixes the overlap! */
 }
 
 body {
@@ -270,6 +271,14 @@ nav {
 .icon-box.red { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
 .icon-box.orange { background: rgba(249, 115, 22, 0.1); color: #F97316; }
 .icon-box.yellow { background: rgba(234, 179, 8, 0.1); color: #EAB308; }
+/* --- Icon Box Colors --- */
+.icon-box.red { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
+.icon-box.orange { background: rgba(249, 115, 22, 0.1); color: #F97316; }
+.icon-box.yellow { background: rgba(234, 179, 8, 0.1); color: #EAB308; }
+.icon-box.green { background: rgba(0, 210, 106, 0.1); color: var(--primary); }
+.icon-box.blue { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+.icon-box.purple { background: rgba(168, 85, 247, 0.1); color: #A855F7; }
+.icon-box.teal { background: rgba(20, 184, 166, 0.1); color: #14B8A6; }
 
 .card h3 { font-size: 1.25rem; margin-bottom: 12px; font-family: var(--font-heading); }
 .card p { color: var(--text-muted); font-size: 0.95rem; }
@@ -420,7 +429,10 @@ nav {
     transition: 0.3s; 
     margin-bottom: 4px;
 }
-.info-item a:hover { color: var(--primary); }
+.info-item a:hover, .info-item span:hover { 
+    color: var(--primary); 
+    cursor: default; 
+}
 
 .contact-form {
     background: var(--bg-dark);
