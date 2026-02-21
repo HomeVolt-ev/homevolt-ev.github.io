@@ -268,9 +268,7 @@ nav {
     justify-content: center;
     margin-bottom: 20px;
 }
-.icon-box.red { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
-.icon-box.orange { background: rgba(249, 115, 22, 0.1); color: #F97316; }
-.icon-box.yellow { background: rgba(234, 179, 8, 0.1); color: #EAB308; }
+
 /* --- Icon Box Colors --- */
 .icon-box.red { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
 .icon-box.orange { background: rgba(249, 115, 22, 0.1); color: #F97316; }
@@ -484,16 +482,6 @@ footer {
 .mobile-link { color: white; text-decoration: none; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .mobile-link.highlight { color: var(--primary); border: none; font-weight: bold; }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .hero-actions { flex-direction: column; }
-    .nav-links { display: none; }
-    .mobile-toggle { display: block; }
-    .split-layout, .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
-    .visual-card { height: 250px; }
-}
-
 /* --- Animations (Lag Free) --- */
 .fade-in-up { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s forwards; }
 .delay-1 { animation-delay: 0.1s; }
@@ -567,8 +555,58 @@ footer {
     line-height: 1.4;
 }
 
-/* Mobile Adjustment */
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
+
+/* --- TABLETS (Screens smaller than 1024px) --- */
+@media (max-width: 1024px) {
+    /* Adjust grid to 2 columns instead of 3 */
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    
+    /* Slightly reduce main headings */
+    .hero h1 { font-size: 3rem; }
+    .section-header h2 { font-size: 2.2rem; }
+    .split-content h2 { font-size: 2.2rem; }
+}
+
+/* --- PHONES (Screens smaller than 768px) --- */
 @media (max-width: 768px) {
+    /* Navigation Adjustments */
+    .nav-links { display: none; }
+    .mobile-toggle { display: block; }
+    
+    /* Hero Adjustments */
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .hero-actions .btn { width: 100%; justify-content: center; }
+    
+    /* Section & Spacing Adjustments (Fixes the heavy scrolling!) */
+    .section-padding { padding: 60px 0; } 
+    #why-us { padding: 60px 0 !important; }
+    .section-header { margin-bottom: 40px; }
+    .section-header h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    .section-header p { font-size: 0.95rem; }
+    
+    /* Grid Adjustments - Force 1 column */
+    .grid-3 { grid-template-columns: 1fr; gap: 20px; }
+    
+    /* Card Adjustments (Making text smaller for "Why Us" and "The Problem") */
+    .card { padding: 24px; }
+    .card h3 { font-size: 1.1rem; }
+    .card p { font-size: 0.9rem; }
+    .icon-box { width: 48px; height: 48px; margin-bottom: 16px; }
+    
+    /* Split Layout & Contact Adjustments */
+    .split-layout, .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    .split-content h2 { font-size: 1.8rem; }
+    .split-content p { font-size: 0.95rem; }
+    .visual-card { height: 250px; }
+    
+    .contact-info h2 { font-size: 1.8rem; }
+    
+    /* Mobile Success Toast Adjustment */
     .success-toast {
         right: 20px;
         left: 20px; /* Center it on mobile */
