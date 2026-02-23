@@ -611,7 +611,26 @@ footer {
     .visual-card { height: 250px; }
     
     .contact-info h2 { font-size: 1.8rem; }
-    
+
+    /* --- MOBILE CONTACT CARDS (Fixes the clumsy squishing) --- */
+    .contact-cards { 
+        grid-template-columns: repeat(2, 1fr); /* Keeps Leads & Call side-by-side */
+        gap: 10px; 
+    }
+    .info-item { 
+        gap: 10px; /* Tighter gap between icon and text */
+        margin-bottom: 20px; 
+    }
+    .info-item strong { 
+        font-size: 0.9rem; /* Smaller titles so they fit on the screen */
+    }
+    .info-item a, .info-item span { 
+        font-size: 0.8rem; /* Shrinks the long phone numbers so they don't awkwardly wrap */
+    }
+    .info-item:nth-child(3) {
+        grid-column: span 2; /* Forces the "Email" section to drop below and take the full width */
+    }
+
     /* Mobile Success Toast Adjustment */
     .success-toast {
         right: 20px;
